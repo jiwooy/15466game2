@@ -71,9 +71,6 @@ PlayMode::PlayMode() : scene(*hexapod_scene) {
 	camera = &scene.cameras.front();
 
 	glm::mat4x3 frame = camera->transform->make_local_to_parent();
-	glm::vec3 right = -frame[0];
-	glm::vec3 forward = -frame[2];
-	glm::vec2 move = glm::vec2(0.0f);
 	camera->transform->position[0] = 0.276538f;
 	camera->transform->position[1] = 4.126640f;
 	camera->transform->position[2] = 64.429611f;
@@ -278,12 +275,6 @@ bool PlayMode::snake_eat() {
 
 		t->rotation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f);
 		t->position = snake_vec.back()->t->position;
-		auto i = scene.transforms.begin();
-		//printf("pos name %f %f %f\n", scene.transforms.back().position[0], scene.transforms.back().position[1], scene.transforms.back().position[2]);
-		// for (auto &tr : scene.transforms) {
-		// 	printf("%s %f %f %f\n", tr.name.c_str(), tr.position[0], tr.position[1], tr.position[2]);
-		// }
-		
 		t->scale = snakedraw->transform->scale;
 
 		snake_size++;
