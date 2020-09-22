@@ -1,8 +1,9 @@
-# (TODO: your game's title)
+# Tilt Snake
 
-Author: (TODO: your name)
+Author: Jiwoo Yoo
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: The classic game of snake...except you can move the apple. Tilting the board
+moves your snake, but the apple is also affected by this.
 
 Screen Shot:
 
@@ -10,9 +11,9 @@ Screen Shot:
 
 How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+WASD to tilt the board
 
-Sources: (TODO: list a source URL for any assets you did not create yourself. Make sure you have a license for the asset.)
+Sources: all assets created by me
 
 This game was built with [NEST](NEST.md).
 
