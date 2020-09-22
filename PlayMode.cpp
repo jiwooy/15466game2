@@ -70,7 +70,6 @@ PlayMode::PlayMode() : scene(*hexapod_scene) {
 	if (scene.cameras.size() != 1) throw std::runtime_error("Expecting scene to have exactly one camera, but it has " + std::to_string(scene.cameras.size()));
 	camera = &scene.cameras.front();
 
-	glm::mat4x3 frame = camera->transform->make_local_to_parent();
 	camera->transform->position[0] = 0.276538f;
 	camera->transform->position[1] = 4.126640f;
 	camera->transform->position[2] = 64.429611f;
